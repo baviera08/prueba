@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	DATOS DEL SISTEMA
+{% endblock %}
+
+{% block content %}
+	
+<label>USO DE CPU</label>
+	{{cpu}} 
+
+<label>USO DE MEMORIA</label>
+	{{memoria}} 
+
+<label>USO DE RED</label>
+	{{network}} 	
+
+{% endblock %}

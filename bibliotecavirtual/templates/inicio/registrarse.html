@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Registrarse
+{% endblock %}
+
+{% block content %}
+
+
+<form action="{% url 'inicio:registro' %}" method="post">
+	{% csrf_token %}
+    <p>Usuario </p><input type="text" name="username" id="username" value='{% if username %}{{username }}{% endif %}'>
+    <p>Password </p><input type="password" name="password" id="password">
+    <input type="hidden" name="next" id="next" value="{{ next }}">
+
+    <input type="hidden" value="Registrarse" />
+</form>
+
+{% endblock %}
+
+
+<!---
+
+	<form method="POST">{% csrf_token %}
+	
+		{{form.as_p}}
+		<input type="submit" value="Registrarse">
+
+	</form>
+
+
+-->
